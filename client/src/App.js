@@ -36,7 +36,7 @@ class App extends Component {
     if (!this.state.selectedPost) {
       return this.state.posts;
     } else {
-      return [this.state.posts.find(x => x.id == this.state.selectedPost)];
+      return [this.state.posts.find(x => x.id === this.state.selectedPost)];
     }
   }
   render() {
@@ -47,8 +47,8 @@ class App extends Component {
         <div className={style.container}>
           <Menu onMenuItemClick={this.onMenuItemClick} />
           <Main 
-            posts={this.state.posts}
-            onMenuItemClick={this.onMenuItemClick.bind(this)} />
+            posts={this.getPosts()}
+          />
         </div>
       </div>
     );
