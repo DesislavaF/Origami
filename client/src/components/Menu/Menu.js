@@ -20,7 +20,7 @@ const Menu = ({
                 <MenuItem 
                     key={x.id}
                     id={x.id}
-                    isSelected={x.id === currentItem}
+                    isSelected={x.id == currentItem}
                     onClick={menuItemClickHandler}
                 >
                     {x.text}
